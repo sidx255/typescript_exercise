@@ -1,9 +1,9 @@
 let user = {};
-const getUserDetails = async () => {
+export const getUserDetails = async () => {
   return global.db;
 };
 
-const createUser = async (name, email) => {
+export const createUser = async (name, email) => {
   console.log("POST /tasks/ service is called");
   user = {
     id: global.id,
@@ -15,7 +15,7 @@ const createUser = async (name, email) => {
   return user;
 };
 
-module.exports = {
-  getUserDetails,
-  createUser
-};
+// export default {
+//   getUserDetails,
+//   createUser
+// };

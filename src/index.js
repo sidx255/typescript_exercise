@@ -1,6 +1,6 @@
 // express app setup
-const express = require("express");
-const userRouter = require("./src/routes/userRouter");
+import express from "express";
+import userRouter from "./routes/userRouter.js";
 const app = express();
 app.use(express.json());
 const port = 3000;

@@ -1,18 +1,18 @@
 
-const userDetails = require("../services/userDetails");
+import * as userService from "../services/userDetails.js";
 
-const getUserDetails = async (req, res) => {
+export const getUserDetails = async (req, res) => {
   console.log("GET /users DETAILS");
-  res.json(await userDetails.getUserDetails());
+  res.json(await userService.getUserDetails());
 };
     
-const createUser = async (req, res) => {
+export const createUser = async (req, res) => {
   const { name, email } = req.body;
-  const user = await userDetails.createUser(name, email);
+  const user = await userService.createUser(name, email);
   res.status(201).json(user);
 };
 
-module.exports = {
-  getUserDetails,
-  createUser,
-};
+// export default {
+//   getUserDetails,
+//   createUser,
+// };
